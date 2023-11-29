@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{padding: 0;margin: 0;box-sizing: border-box;font-family: 'Open Sans', sans-serif}body{background-color: rgb(224, 228, 230)}.container{padding: 20px 30px;margin-top: 20px}.h5{font-weight: bolder;font-size: 1.5rem}.bg-green{background-color: #2ec1ac;color: #f4f4f4}.bg-green#channel{padding: 5px 15px;border-radius: 20px;height: 35px;font-size: 0.9rem}.search-bar{border: 1px solid #ddd;border-radius: 20px;padding: 0px 10px;background-color: #fff}.search-bar .fa-search{font-size: 1.2rem;color: #bbb}.search-bar .form-control{border: none;box-shadow: none;outline: none}.nav.nav-tabs .nav-item .nav-link{color: #aaa;border: none}.nav.nav-tabs .nav-link.active{background-color: #f9f9f9;border: none;color: #2ec1ac;border-bottom: 4px solid #2ec1ac}.nav.nav-tabs .nav-item .nav-link:hover{color: #2ec1ac;border: none}.nav.nav-tabs .nav-item .nav-link.active:hover{color: #2ec1ac;border-bottom: 4px solid #2ec1ac}.nav.nav-tabs .nav-item .nav-link:focus{border: none;border-bottom: 4px solid #2ec1ac;color: #2ec1ac}.filter{padding: 5px 10px;font-size: 0.9rem;border-radius: 20px}.filter #filter, .filter #sort{border: none;font-weight: 800;outline: none;font-size: 0.9rem}p.text-muted{font-size: 0.9rem}.box{padding: 15px;border-radius: 10px;margin: 5px 0px}.box p.text-muted{margin: 0;font-weight: 600;font-size: 0.85rem}.box .tag{font-size: 0.8rem;font-weight: 600;background-color: #eee;padding: 0 5px;margin-right: 2px}.fa-circle{font-size: 0.7rem}span.font-weight-bold{font-size: 0.9rem}span.comment{font-size: 0.7rem;font-weight: 600}.profiles{position: relative}#pic1,#pic2,#number{position: absolute;border: 3px solid #fff}#number{font-size: 15px;font-weight: 900;background-color: #2ec1ac;display: inline;padding: 6px;color: #eee;right: 5%}#pic1{right: 20%}#pic2{right: 12%;object-fit: cover}#number{width: 40px;text-align: center}.purple{color: #800080}.green{color: #008000}.orange{color: #ffa500}.yellow{color: #ffff00}.blue{color: #6b6bda}@media(max-width: 767px){#pic1{left: 30%;bottom: -15%}#pic2{left: 37%;bottom: -15%}#number{left: 43%;bottom: -15%}.nav.nav-tabs{display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start}.nav-link{display: block;padding: .5rem 0.5rem}}@media(max-width: 576px){.container{margin: 5px}.h5{font-size: 1.6rem;text-align: center}}@media(max-width:370px){#pic1{left: 26%;bottom: -15%}#pic2{left: 37%;bottom: -15%}#number{left: 47%;bottom: -15%}}
+https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
+Copy CDN
+https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js
+Copy CDN
+https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+Copy CDN
+https://use.fontawesome.com/releases/v5.7.2/css/all.css
+        </style>
+    </head>
+    <body>
+        <div class="container bg-light border rounded mb-5">
+            <div class="d-sm-flex align-items-center">
+                <div class="h5 pr-3">Discover channels</div>
+                <div class="bg-green text-center" id="channel">+Channel</div>
+            </div>
+            <div class="d-flex align-items-center mt-3 search-bar"> <span class="fas fa-search"></span> <input type="text" class="form-control" placeholder="Search in 3042 channels by name,description,category or tag"> </div>
+            <div class="pb-3">
+                <ul class="nav nav-tabs pt-3">
+                    <li class="nav-item"> <a class="nav-link active" href="#"><b>Suggested</b></a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"><b>Most popular</b></a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"><b>Newest created</b></a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"><b>Categories</b></a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"><b>Browse all</b></a> </li>
+                </ul>
+            </div>
+            <div class="d-sm-flex align-sm-items-center">
+                <div class="d-flex align-items-center bg-white filter"> <span class="fas fa-filter pr-1"></span> <b>Filter:</b> <select name="filter" id="filter" class="pl-sm-0 pl-3 ml-sm-0 ml-auto">
+                        <option value="showall">Show all</option>
+                        <option value="featured">Featured</option>
+                    </select> </div>
+                <div class="d-flex align-items-center bg-white filter mx-sm-2 my-sm-0 my-2"> <span class="fas fa-arrow-down pr-1"></span> <b>Sort:</b> <select name="filter" id="sort" class="pl-sm-0 pl-4 ml-sm-0 ml-auto">
+                        <option value="showall">Show all</option>
+                        <option value="featured">Featured</option>
+                    </select> </div>
+                <div class="ml-auto btn"> <span class="fas fa-th"></span> </div> <button class="btn bg-green"> <span class="fas fa-bars"></span> </button>
+            </div>
+            <div class="py-2 pt-3">
+                <p class="text-muted text-justify">Because you have joined to multiple channels tagged with <b>Berlin</b> or <b>News</b> </p>
+            </div>
+            <div class="box bg-white">
+                <div class="row">
+                    <div class="col-lg-8 col-md-7 col-12">
+                        <div class="d-flex align-items-center"> <span class="fas fa-circle purple"></span> <b class="px-2">Berlin office news</b> </div>
+                        <p class="text-muted">Any news related to Berlin office</p> <span class="tag">Berlin</span> <span class="tag">News</span> <span class="tag">Office</span> <span class="font-weight-bold">+ 5 tags</span>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-12 profiles">
+                        <div class="d-flex flex-column align-items-md-end justify-content-between">
+                            <div class="d-flex align-items-center"> <span class="far fa-comment text-muted btn"></span> <span class="comment text-muted">132 per day-Very active</span> <span class="fas fa-ellipsis-h btn"></span> </div>
+                            <div class="py-md-0 py-3"> <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic1" alt=""> <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic2" alt="">
+                                <div id="number" class="rounded-circle d-absolute">+2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box bg-white">
+                <div class="row">
+                    <div class="col-lg-8 col-md-7 col-12">
+                        <div class="d-flex align-items-center"> <span class="fas fa-circle green"></span> <b class="px-2">Istanbul office news</b> </div>
+                        <p class="text-muted text-justify">Any news related to Istanbul office</p> <span class="tag">Istanbul</span> <span class="tag">News</span> <span class="tag">Office</span> <span class="font-weight-bold">+ 2 tags</span>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-12 profiles">
+                        <div class="d-flex flex-column align-items-md-end justify-content-between">
+                            <div class="d-flex align-items-center"> <span class="far fa-comment text-muted btn"></span> <span class="comment text-muted">129 per day-Very active</span> <span class="fas fa-ellipsis-h btn"></span> </div>
+                            <div class="py-md-0 py-3"> <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic1" alt=""> <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic2" alt="">
+                                <div id="number" class="rounded-circle d-absolute">+2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box bg-white">
+                <div class="row">
+                    <div class="col-lg-8 col-md-7 col-12">
+                        <div class="d-flex align-items-center"> <span class="fas fa-circle orange"></span> <b class="px-2">St. Petersburg office news</b> </div>
+                        <p class="text-muted text-justify">Any news related to St. Petersburg(Russia) office</p> <span class="tag">St.Petersburg</span> <span class="tag">News</span> <span class="tag">Office</span> <span class="font-weight-bold">+ 1 tags</span>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-12 profiles">
+                        <div class="d-flex flex-column align-items-md-end justify-content-between">
+                            <div class="d-flex align-items-center"> <span class="far fa-comment text-muted btn"></span> <span class="comment text-muted">100 per day-Very active</span> <span class="fas fa-ellipsis-h btn"></span> </div>
+                            <div class="py-md-0 py-3"> <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic1" alt=""> <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic2" alt="">
+                                <div id="number" class="rounded-circle d-absolute">+2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-4 pb-2">
+                <p class="text-muted">Because you are member of similar channels.</p>
+            </div>
+            <div class="box bg-white">
+                <div class="row">
+                    <div class="col-lg-8 col-md-7 col-12">
+                        <div class="d-flex align-items-center"> <span class="fas fa-circle yellow"></span> <b class="px-2">PM and Design</b> </div>
+                        <p class="text-muted text-justify">Topics related to Product and Design</p> <span class="tag">PM</span> <span class="tag">Design</span> <span class="tag">Product</span>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-12 profiles">
+                        <div class="d-flex flex-column align-items-md-end justify-content-between">
+                            <div class="d-flex align-items-center"> <span class="far fa-comment text-muted btn"></span> <span class="comment text-muted">32 per day-Active</span> <span class="fas fa-ellipsis-h btn"></span> </div>
+                            <div class="py-md-0 py-3"> <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic1" alt=""> <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic2" alt="">
+                                <div id="number" class="rounded-circle d-absolute">+2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-4 pb-2">
+                <p class="text-muted">Because people you work closely are member of these channels</p>
+            </div>
+            <div class="box bg-white">
+                <div class="row">
+                    <div class="col-lg-8 col-md-7 col-12">
+                        <div class="d-flex align-items-center"> <span class="fas fa-circle blue"></span> <b class="px-2">Analysis request</b> </div>
+                        <p class="text-muted text-justify">Channel for getting insights about business/revenue metrics</p> <span class="tag">Biz</span> <span class="tag">Inshights</span> <span class="tag">Analyst</span> <span class="font-weight-bold">+ 5 tags</span>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-12 profiles">
+                        <div class="d-flex flex-column align-items-md-end justify-content-between">
+                            <div class="d-flex align-items-center"> <span class="far fa-comment text-muted btn"></span> <span class="comment text-muted">12 per day-Quite</span> <span class="fas fa-ellipsis-h btn"></span> </div>
+                            <div class="py-md-0 py-3"> <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic1" alt=""> <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="40" height="40" class="rounded-circle" id="pic2" alt="">
+                                <div id="number" class="rounded-circle d-absolute">+2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
