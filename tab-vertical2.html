@@ -1,0 +1,419 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AntenaGames, small game studio, BallBoy Game">
+    <meta name="author" content="A.K.">
+    <link rel="shortcut icon" href="" />
+
+    <title>AntenaGames </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleblog.css">
+
+    <style>
+/* ****************
+     General
+ ****************** */
+ body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  color: #555;
+}
+
+ul, nav {
+  list-style: none;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 1;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 5px auto;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.hr-h1 {
+  margin: 0 auto 35px auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: orange;
+  width: 100px;
+}
+
+section {
+  align-items: center;
+  padding: 70px 100px;
+}
+
+section p {
+  text-align: center;
+  margin-bottom: 35px;
+  padding: 0 20px;
+  line-height: 2;
+  font-family: 'Lato', sans-serif;
+}
+
+.grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* General slide up */
+.slideanim {
+  visibility: ;
+}
+
+.slide {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  -moz-animation-name: slide;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  visibility: visible;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(60%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/* Service slide left */
+.slideanimleft {
+  visibility: ;
+}
+
+.slideleft {
+  animation-name: slideleft;
+  -webkit-animation-name: slideleft;
+  -moz-animation-name: slideleft;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideleft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@media (max-width: 375px) {
+  section {
+    padding: 20px 10px;
+  }
+
+  .bg-section h1 {
+    font-size: 27px;
+  }
+}
+
+
+
+
+
+/*---------------------------------------------------
+ *  Service
+ *-------------------------------------------------- */
+#service {
+  background-color: #eee;
+}
+
+#service .tab-content {
+  background-color: #fff;
+  min-height: 650px;
+  padding: 25px;
+}
+
+#service .brand-pills li a {
+ width: 200px;   
+}
+
+#service .brand-pills li a {
+  font-size: 17px;
+  padding: 45px 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  background-color: #3377aa;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+#service .brand-pills li a:focus {
+  font-size: 15px;
+  padding: 45px 15px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  background-color: #3377aa;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+#service .brand-pills li.active a {
+  background-color: orange;
+}
+
+#service .brand-pills li.active a:focus, 
+#service .brand-pills li.active a:hover, 
+#service .brand-pills li.active a:focus:hover {
+  background-color: orange;
+}
+
+#service .brand-pills > li > a:hover, 
+#service .brand-pills > li > a:focus:hover {
+  background-color: orange;
+}
+
+#service li.brand-nav.active a:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 55px solid transparent;
+  border-bottom: 55px solid transparent;
+  border-left: 25px solid orange;
+  position: absolute;
+  top: 50%;
+  margin-top: -55px;
+  left: 100%;
+  z-index: 2;
+}
+
+#service h3 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 500;
+  color: orange;
+ 
+}
+
+#service p {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: left;
+  font-weight: 500;
+  color: #0f0f0f;
+  color: rgba(15, 15, 15, 0.6);
+  font-family: 'Mukta', sans-serif;
+  word-spacing: 3px;
+}
+
+
+@media (max-width: 375px) {
+
+
+  #service .tab-content {
+    min-height: 680px;
+    padding: 10px;
+  }
+
+  #service h3 {
+    font-size: 20px;
+  }
+
+  #service p {
+    line-height: 20px;
+    padding: 5px;
+  }
+
+  #service .brand-pills li a {
+    font-size: 14px;
+    padding: 20px 15px;
+  }
+
+  #service .brand-pills li a:focus {
+    font-size: 14px;
+    padding: 20px 15px;
+  }
+
+  #service li.brand-nav.active a:after {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 10px solid #9C9A40;
+    margin-top: -30px;
+  }
+}        
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+
+</head>
+<body>
+  
+  <section class="bg-section" id="service">
+		<div class="section-h1">
+      <h1><a href="http://www.antenagames.com" target="_blank">AntenaGames</a></h1>
+			<hr class="hr-h1">
+		</div>
+        <div class="container-fluid">
+        	<div class="row slideanim"> 
+	        <div class="tabpanel" role="tabpanel">
+	            <div class="col-md-3 col-sm-3">
+	                <ul class="nav nav-pills brand-pills nav-stacked" role="tablist">
+	                    <li role="presentation" class="brand-nav active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">BallBoy</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">BallBoy Plus</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">BallBoy Up</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">BallBoy Go</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-md-9 col-sm-9">
+	                <div class="tab-content">
+	                    <div role="tabpanel" class="tab-pane active slideanimleft" id="tab1">
+	                    	<h3 class="laws">BallBoy</h3>
+	                    	<hr class="laws-hr">
+                        <div class="col-md-4 col-sm-4">
+                          <a href="http://www.antenagames.com" target="_blank"><img src="https://res.cloudinary.com/daa09eu5f/image/upload/v1583689896/bb2_ii66cg.png" class="img-responsive"> </a>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+	                        <p>	                          
+It was a beautiful sunny day. BallBoy and his friend BallGirl enjoyed singing in the garden, when suddenly the sky darkened and strong noise filled the sky. Evil cubes suddenly appeared from neighbour village and kidnapped BallGirl. BallBoy was completely hopeless.
+BallBoy has to defeat evil cubes and save BallGirl. So help him on his mission.
+                          </p>
+                          <p>
+                            Visit us on our website: <a href="http://www.antenagames.com" target="_blank">AntenaGames</a>
+	                        </p>
+                          <div class="row">
+          <div class="play-game">
+            <a href="https://play.google.com/store/apps/details?id=com.antenagames.ballboy" target="_blank" class="googleplay" title="Android" >
+              <img src="https://res.cloudinary.com/daa09eu5f/image/upload/v1583689824/google-p_xrmgb1.png" class="img-responsive" style="width:150px; height:50px; margin-left:5%;">
+            </a>
+                            </div>                            
+                          </div>
+                          
+                        </div>
+                        
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft" id="tab2">
+	                    	<h3 class="laws">BallBoy Plus</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+	                           
+
+It was a beautiful sunny day. BallBoy and his friend BallGirl enjoyed singing in the garden, when suddenly the sky darkened and strong noise filled the sky. Evil cubes suddenly appeared from neighbour village and kidnapped BallGirl. BallBoy was completely hopeless.
+	                        </p>
+	                        <p>
+	                            BallBoy has to defeat evil cubes and save BallGirl. So help him on his mission.</p>
+<p>
+You can defeat evil cubes if the ball has the same color as evil cube when they collide. Touch/press left part of screen for moving the character(ball) left. Touch/press right part of screen for moving the character right. Cubes have four colors(blue, red, green and yellow). The game has 45 awesome and well-designed levels.
+	                        </p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft" id="tab3">
+	                    	<h3 class="laws">BallBoy Up</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+	                            You can defeat evil cubes if the ball has the same color as evil cube when they collide. Touch/press left part of screen for moving the character(ball) left. Touch/press right part of screen for moving the character right. Cubes have four colors(blue, red, green and yellow). The game has 45 awesome and well-designed levels. 
+	                        </p>
+	                        <p>
+	                            It was a beautiful sunny day. BallBoy and his friend BallGirl enjoyed singing in the garden, when suddenly the sky darkened and strong noise filled the sky. Evil cubes suddenly appeared from neighbour village and kidnapped BallGirl. BallBoy was completely hopeless.
+BallBoy has to defeat evil cubes and save BallGirl. So help him on his mission.
+	                        </p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft" id="tab4">
+	                    	<h3 class="laws">BallBoy Go</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+	                            It was a beautiful sunny day. BallBoy and his friend BallGirl enjoyed singing in the garden, when suddenly the sky darkened and strong noise filled the sky. Evil cubes suddenly appeared from neighbour village and kidnapped BallGirl. BallBoy was completely hopeless.
+BallBoy has to defeat evil cubes and save BallGirl. So help him on his mission. 
+	                        </p>
+                        
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        </div>
+	    </div>    
+		
+	</section>
+  
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     $(document).ready(function(){
+      var i=1;
+     $("#add_row").click(function(){
+      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='origin"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='est_departure"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input name='act_departure"+i+"' type='text' class='form-control input-md'></td><td><input  name='destination"+i+"' type='text'  class='form-control input-md'></td><td><input name='est_arrival"+i+"' type='text' class='form-control input-md'/></td><td><input name='act_arrival"+i+"' type='text' class='form-control input-md' /></td><td><input name='aircraft"+i+"' type='text' class='form-control input-md' /></td>");
+
+      $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+      i++; 
+  });
+     $("#delete_row").click(function(){
+         if(i>1){
+		 $("#addr"+(i-1)).html('');
+		 i--;
+		 }
+	 });
+
+});        
+    </script>
+</head>
+<body>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    
+    <div class="container">
+        <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    Add Legs to Flight
+                </div>
+            </div>
+            <div class="panel-body">
+             
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <table class="table table-bordered table-hover" id="tab_logic">
+                    <thead>
+                        <tr >
+                            <th>
+                                Leg
+                            </th>
+                            <th>
+                                Origin
+                            </th>
+                            <th>
+                                Planned Departure Time
+                            </th>
+                            <th>
+                                Actual Departure Time
+                            </th>
+                            <th>
+                                Destination
+                            </th>
+                            <th>Planned Arrival Time</th>
+                            <th>Actual Arrival Time</th>
+                            <th>Aircraft</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0'>
+                            <td>
+                            1
+                            </td>
+                            <td>
+                            <input type="text" name='origin0'  placeholder='CYQT' class="form-control"/>
+                            </td>
+                            <td>
+                            <input type="text" name='est_departure0' placeholder='2014-06-01 13:45' class="form-control"/>
+                            </td>
+                            <td>
+                            <input type="text" name='act_departure0' placeholder='2014-06-01 13:45' class="form-control"/>
+                            </td>
+                            <td>
+                            <input type="text" name='destination0' placeholder='CYEL' class="form-control"/>
+                            </td>
+                            <td>
+                            <input type='text' name='est_arrival0' placeholder='2014-06-01 15:15' class="form-control" />    
+                            </td>
+                            <td>
+                            <input type='text' name='act_arrival0' placeholder='2014-06-01 15:15' class="form-control" />    
+                            </td>
+                           <td>
+                            <input type='text' name='aircraft0' placeholder='C-FXAB' class="form-control" />    
+                            </td>
+                        </tr>
+                        <tr id='addr1'></tr>
+                    </tbody>
+                </table>
+                    <a id="add_row" class="btn btn-primary btn-success"><span class="glyphicon glyphicon-plus"></span> Add Leg</a>
+                    <a id="delete_row" class="btn btn-primary btn-danger pull-right"><span class="glyphicon glyphicon-remove"></span> Remove Leg</a>
+    </div>
+        
+    
+    </div>
+            </div>
+            <div class="panel-footer">
+                could put the submit button here in the footer div...
+            </div>
+        </div>
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.flex-box-this{
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: -webkit-box ;
+    display: flex;
+    position: relative;
+}
+
+
+    .liner {
+        height: 2px;
+        background: #ddd;
+        position: absolute;
+        width: 70%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 35%;
+    }
+
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+        color: #555555;
+        cursor: default;
+        border: 0;
+        border-bottom-color: transparent;
+    }
+
+    span.round-tabs {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        display: inline-block;
+        border-radius: 100px;
+        background: white;
+        font-size: 25px;
+
+        border: 2px solid #ddd;
+        color: #555555;
+    }
+
+    li.active span.round-tabs {
+        color: #5bc0de;
+        border: 2px solid #5bc0de;
+    }
+
+    span.round-tabs:hover {
+        color: #736e6e;
+        border: 2px solid #736e6e;
+    }
+
+    .nav-tabs > li {
+        margin-bottom: -6px;
+    }
+
+    .nav-tabs > li.active:after {
+        content: " ";
+        display: inline-block;
+        border: 12px solid transparent;
+        border-bottom-color: #5bc0de;
+    }
+
+    .nav-tabs > li a {
+        margin: 0 auto;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+    @media ( max-width: 768px ) {
+        span.round-tabs {
+            font-size: 16px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+    }        
+    </style>
+    <script>
+    $(function () {
+       
+       $('[data-toggle="tooltip"]').tooltip();
+   });        
+    </script>
+</head>
+<body>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    
+    
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    
+    <h2 class="text-center">Super Simple css Tabs Form <small>(using css-flex for  maximum alignment and fontsAwesome)</small></h2>
+    
+    <div class="container " style="padding-top:100px">
+       <section class="board">
+          <div class="board-inner">
+             <ul class="nav nav-tabs flex-box-this" id="myTab">
+                <span class="liner"></span>
+                <li class="text-center active">
+                   <a class="" data-toggle="tab" href="#tab1" aria-expanded="false">
+                   <span class="round-tabs " data-toggle="tooltip" title="" data-original-title="Random Text 1">
+                   <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                   </span>
+                   </a>
+                </li>
+                <li class="text-center">
+                   <a data-toggle="tab" href="#tab2" aria-expanded="false">
+                   <span class="round-tabs" data-toggle="tooltip" title="" data-original-title="Random Text 2">
+                   <i class="fa fa-id-card" aria-hidden="true"></i>
+                   </span>
+                   </a>
+                </li>
+                <li class="text-center ">
+                   <a data-toggle="tab" href="#tab3" aria-expanded="true">
+                   <span class="round-tabs" data-toggle="tooltip" title="" data-original-title="Random Text 3">
+                   <i aria-hidden="true" class="fa fa-calendar"></i>
+                   </span>
+                   </a>
+                </li>
+                <li class="text-center">
+                   <a data-toggle="tab" href="#tab4" aria-expanded="false">
+                   <span class="round-tabs" data-toggle="tooltip" title="" data-original-title="Random Text">
+                   <i class="fa fa-user" aria-hidden="true"></i>
+                   </span>
+                   </a>
+                </li>
+             </ul>
+          </div>
+          <div class="tab-content " id="tab1">
+             <div class="tab-pane in active fade">
+                <h2 class="">
+                 A super simplified Version of <a href="https://bootsnipp.com/user/snippets/Qo01j">Circular Bootstrap tabs</a>
+                </h2>
+                <p> Items are aligned using Flex-css so the form can dynamically support fewer or more tabs without any misalignments and no need of css editing </p>
+             </div>
+             <div class="tab-pane fade" id="tab2">
+                <h2 class="">
+                   TAB 2
+                </h2>
+             </div>
+            <div class="tab-pane fade " id="tab3">
+                <h2 class="">
+                   TAB 3
+                </h2>
+             </div>
+             <div class="tab-pane fade" id="tab4">
+                <h2 class="">
+                   TAB 4
+                </h2>
+             </div>
+          </div>
+       </section>
+    </div>
+    
+        
+</body>
+</html>
